@@ -1,13 +1,14 @@
 
 const AvatarModel = require('../Models/AvatarModel')
+const validateUserUpload = require('../Middlewares/UploadMiddleware')
+
 const { Router } = require("express");
 const multer = require("multer");
 
 const ImageUpload = Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
-ImageUpload.post("/Uploads/:id", upload.single("file"), async (req, res) => {
-    // 64424b5438a54597a3a018f7
+ImageUpload.post("/Uploads/:id", upload.single("file"),validateUserUpload, async (req, res) => {
     const  userid  = req.params.id;
     const { originalname, mimetype, buffer } = req.file;
     var base64Data = "";

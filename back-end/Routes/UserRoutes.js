@@ -1,13 +1,20 @@
 const { Router } = require("express");
 const UserModel = require("../Models/UserModel");
+const SignUpInputValidator = require('../Middlewares/SignupMiddleware')
+const validateLoginInput = require('../Middlewares/Loginmiddleware')
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const UserRouter = Router();
 
 UserRouter.get("/", async (req, res) => {
-  res.send("All Users");
+    try{
+      let all_users = await UserModel.find();
+      res.send(all_users);
+    }catch(e){
+     res.send({msg:e,Error : "server Error"})
+    }
 });
-UserRouter.post("/reg", async (req, res) => {
+UserRouter.post("/reg",SignUpInputValidator,async (req, res) => {
   const { first_name, last_name, email, phone, password } = req.body;
   try {
     bcrypt.hash(password, 5, async (err, hash) => {
@@ -37,7 +44,7 @@ UserRouter.post("/reg", async (req, res) => {
   }
 });
 
-UserRouter.post("/login", async (req, res) => {
+UserRouter.post("/login",validateLoginInput, async (req, res) => {
   const { email, password } = req.body;
   try {
     let User = await UserModel.find({ email: email });
