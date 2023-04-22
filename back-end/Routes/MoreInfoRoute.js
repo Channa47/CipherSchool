@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const MoreInfoModel = require("../Models/MoreInfoModel");
+const UserModel = require("../Models/UserModel");
 const AddMore = Router();
 
 AddMore.get("/details/:userid", async (req, res) => {
@@ -92,7 +93,24 @@ AddMore.patch("/details/:id", async (req, res) => {
   }
 });
 
-
+// Fallowers Get Route;
+AddMore.get("/fallowers/:userid", async (req, res) => {
+  let userid = req.params.userid;
+ 
+  try {
+    let Alluser = await UserModel.find();
+    let Current_user_info = await MoreInfoModel.find({ userid: userid });
+    let fallowers_ids = Current_user_info[0].fallowers;
+    const Main_data = Alluser.filter((obj) => fallowers_ids.includes(obj._id));
+    const { page = 1, limit = Main_data.length } = req.query;
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+    const result = Main_data.slice(startIndex, endIndex);
+    res.send(result);
+  } catch (e) {
+    console.log(e);
+    res.send({ msg: "error" });
+  }
+});
 
 module.exports = AddMore;
-

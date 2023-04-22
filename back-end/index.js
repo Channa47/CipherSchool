@@ -5,7 +5,9 @@ const connection = require('./config/db')
 const UserRouter = require("./Routes/UserRoutes");
 const ImageUpload = require("./Routes/uploadRoute");
 const AddMore = require('./Routes/MoreInfoRoute');
+
 const app = express();
+// Routes
 app.use(express.json());
 app.use("/user",UserRouter)
 app.use("/upload",ImageUpload);
