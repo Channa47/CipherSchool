@@ -23,7 +23,7 @@ app.get('/',(req,res)=>{
     "To Get the Profile picture = /profile.:userid",
     "To get/post More Details of user = /info/details/:userid",
     "To update user info =/info/details/:id?type=description",
-    "To get fallowers = /infor/fallowers/:userid?page=1&limit=2"
+    "To get fallowers = /info/fallowers/:userid?page=1&limit=2"
   ];
 
   res.setHeader("Content-Type", "text/plain");
