@@ -1,0 +1,178 @@
+#Full_navbar{
+    /* background-color: antiquewhite; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 11%;
+    position: fixed;
+    border-bottom: 1px solid black;
+    background-color: aliceblue;
+    z-index: 1;
+}
+.Logo_Container{
+    /* border : 2px solid black; */
+    width: 30%;
+    display: flex;
+    text-align: left;
+    justify-content: space-around;
+    gap: 1%;
+}
+.Logo_Container>img{
+   width: 60%;
+   padding: 1%;
+   mix-blend-mode: darken;
+}
+.darkTheme{
+    background-color: #3a3434;
+}
+.Logo_Container>select{
+    font-size:medium;
+    width: 30%;
+    padding: 1%;
+    border: none;
+}
+.NavItems_Container{
+    /* border: 2px solid black; */
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1%;
+}
+.NavItems_Container>input{
+    width: 60%;
+    border-radius: 20px;
+    text-align: center;
+}
+.NavItems_Container>img{
+    border-radius: 50%;
+}
+
+/* === */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  #ToogleInput:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  #ToogleInput:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  #ToogleInput:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /* Dark mode */
+  .dark-mode {
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+  
+  .dark-mode .slider {
+    background-color: #ffffff;
+  }
+  
+  .dark-mode input:checked + .slider {
+    background-color: #ccc;
+  }
+  
+  .dark-mode input:checked + .slider:before {
+    background-color: #1f1f1f;
+  }
+  
+/* === */
+#Mobile_Navbar_input_display{
+    display: none;
+}
+#Mobile_Navbar_input_none{
+    display: block;
+}
+/* Mediaum Screen */
+@media all and (min-width:768px) and (max-width:1023px){
+    #Full_navbar{
+        /* background-color: #6c5b5b; */
+        height: 5%;
+    }
+}
+@media all and (min-width:340px) and (max-width:767px){
+   #Full_navbar{
+     justify-content: space-between;
+     height: 8%;
+   }
+   .Logo_Container{
+    /* border : 2px solid black; */
+    width: 70%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:0%;
+    }
+    .Logo_Container>img{
+        width: 90%;
+        padding: 0%;
+        mix-blend-mode: darken;
+     }
+     .Logo_Container>select{
+        font-size:medium;
+        width: 10%;
+        padding: 0%;
+        border: none;
+        height: 20%;
+       
+        background-color: aliceblue;
+    }
+    .NavItems_Container{
+        /* border: 2px solid black; */
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        padding: 1%;
+    }
+    .NavItems_Container>input{
+        display: none;
+    }
+    .NavItems_Container>img{
+        border-radius: 0%;
+        display: none;
+    }
+}
