@@ -1,0 +1,92 @@
+#Details{
+    background-image: url('../Images/wave-haikei\ \(1\).png');
+    margin-top: 2%;
+    padding: 1%;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background-color: antiquewhite;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    /* align-items: center; */
+    color: aliceblue;
+}
+#Profile_Details_container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1%;
+    gap: 1%;
+}
+#Profile_Details_container>img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+#Fallowers_container{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+#Fallowers_container>p{
+    width: 100%;
+}
+#User_Info_container{
+    padding-left: 1%;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    margin-left: 2%;
+    /* border: 2px solid red; */
+}
+#User_name{
+    padding: 1%;
+  font-weight: 900;
+  font-size: larger;
+}
+.UserText{
+  font-size: large;
+  font-weight: 600;
+  padding: 1%;
+}
+@media all and (min-width:768px) and (max-width:1023px){
+    #Details{
+        background-image: url('../Images/wave-haikei\ \(1\).png');
+        margin-top: 3%;
+        padding: 1%;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        background-color: antiquewhite;
+        height: 10%;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+}
+
+@media all and (min-width:340px) and (max-width:767px){
+    #Fallowers_container{
+        display: none;
+    }
+    #Profile_Details_container{
+        width: 90%;
+        /* border: 2px solid red; */
+        align-items: center;
+    }
+    #Details{
+        margin-top: 7%;
+    }
+    #User_Info_container{
+        padding-left: 0%;
+        justify-content: center;
+        text-align: left;
+        align-items: center;
+        margin-left: 0%;
+        /* border: 2px solid red; */
+    }
+}
