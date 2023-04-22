@@ -8,7 +8,7 @@ const multer = require("multer");
 const ImageUpload = Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
-ImageUpload.post("/Uploads/:id", upload.single("file"),validateUserUpload, async (req, res) => {
+ImageUpload.post("/uploads/:id", upload.single("file"),validateUserUpload, async (req, res) => {
     const  userid  = req.params.id;
     const { originalname, mimetype, buffer } = req.file;
     var base64Data = "";
@@ -37,6 +37,19 @@ ImageUpload.post("/Uploads/:id", upload.single("file"),validateUserUpload, async
       res.status(500).send({ message: "Server error" });
     }
   });
-
+  
+  ImageUpload.get("/:userid",async(req,res)=>{
+    const userid = req.params.userid;
+    try{
+       let data = await AvatarModel.find({userid:userid});
+       if(data.length>0){
+         res.send({msg:"Profile Picture", data : data[0]});
+       }else{
+        res.send({msg:"No Profile Picture Found" , data : {}})
+       }
+    }catch(e){
+     res.send({msg:"Error"})
+    }
+  })
 
   module.exports = ImageUpload
