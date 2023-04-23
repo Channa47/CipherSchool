@@ -1,0 +1,103 @@
+#interset_container {
+    /* border: 2px solid red; */
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+#interset_container>p {
+    font-size: large;
+    font-weight: bold;
+}
+
+#interset_container>button {
+    align-items: center;
+    width: 8%;
+    height: 25px;
+    border: none;
+    color: aliceblue;
+    background-color: #f3912E;
+    border: #f3912E;
+    border-radius: 5px;
+}
+
+#interset_container>button:hover {
+    cursor: pointer;
+}
+
+#Show_Interest_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+#Hide_Interest_modal{
+    display: none;
+}
+#Show_interest_Modal_parent{
+    width: 70%;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 5%;
+}
+#Show_interest_Modal_Elements{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1%;
+    margin-bottom: 2%;
+}
+#Show_interest_Modal_Elements>div{
+    border: 1px solid black;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 10px;
+}
+#Interest_modal_btn_container{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: end;
+    text-align: right;
+    gap: 2%;
+}
+#Interest_modal_btn_container>button:first-child{
+    background-color: black;
+    color: aliceblue;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+#Interest_modal_btn_container>button:last-child{
+    background-color: #f3912E;
+    color: aliceblue;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+.Selected_ShowColr{
+    background-color: #f3912E;
+    color: aliceblue;
+}
+
+@media all and (min-width:340px) and (max-width:767px) {
+    #interset_container>button {
+        align-items: center;
+        width: 20%;
+        height: 25px;
+        border: none;
+        color: aliceblue;
+        background-color: #f3912E;
+        border: #f3912E;
+        border-radius: 5px;
+    }
+}

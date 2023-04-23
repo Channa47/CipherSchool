@@ -1,0 +1,67 @@
+#Peofession_container{
+    /* border :2px solid red; */
+    padding: 1%;
+    padding-bottom: 3%;
+    border-bottom: 1px solid black;
+}
+#Peofession_container_header{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    margin: 1%;
+}
+#Peofession_container_header>p{
+   font-size: large;
+   font-weight: bold;
+}
+#Peofession_container_header>button{
+    align-items: center;
+    width: 8%;
+    height: 25px;
+    border: none;
+    color: aliceblue;
+    background-color: #f3912E;
+    border: #f3912E;
+    border-radius: 5px;
+ }
+#Peofession_container_inputs{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1%;
+    margin: 1%;
+}
+#Peofession_container_inputs>div{
+    border: 1px solid black;
+    width: 40%;
+    height: 40px;
+    border: none;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#Peofession_container_inputs>div>select{
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+@media all and (min-width:340px) and (max-width:767px){
+    #Peofession_container_header>p{
+        font-size: small;
+        font-weight: bold;
+     }
+     #Peofession_container_header>button{
+        align-items: center;
+        width: 20%;
+        height: 25px;
+        border: none;
+        color: aliceblue;
+        background-color: #f3912E;
+        border: #f3912E;
+        border-radius: 5px;
+     }
+}

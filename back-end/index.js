@@ -7,12 +7,13 @@ const ImageUpload = require("./Routes/uploadRoute");
 const AddMore = require('./Routes/MoreInfoRoute');
 
 const app = express();
+app.use(cors({origin:"*"}));
 // Routes
 app.use(express.json());
 app.use("/user",UserRouter)
 app.use("/profile",ImageUpload);
 app.use("/info",AddMore)
-app.use(cors({origin:"*"}));
+
 
 
 app.get('/',(req,res)=>{

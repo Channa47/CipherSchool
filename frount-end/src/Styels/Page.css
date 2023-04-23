@@ -1,0 +1,111 @@
+#Show_RigisterAndLogin_Modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+#REgistration_container{
+    /* border: 2px solid red; */
+    /* display: grid; */
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    background-color:aliceblue;
+    padding: 1%;
+    color: black;
+    border-radius: 5%;
+}
+#REgistration_container>input{
+    width: 50%;
+    height: 35px;
+    margin-bottom: 2%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    align-items: center;
+    text-align:initial;
+}
+#REgistration_container>button{
+    width: 40%;
+    height: 30px;
+    padding: 1%;
+    border: none;
+    text-align: center;
+    background-color: #f3912E;
+    border-radius: 10px;
+}
+#REgistration_container>button:hover{
+    cursor: pointer;
+    color: aliceblue;
+}
+#REgistration_container>h3>span:hover{
+    color: aqua;
+    cursor: pointer;
+}
+#Login_container{
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    background-color:aliceblue;
+    padding: 1%;
+    color: black;
+    border-radius: 5%;
+}
+#Login_container>input{
+    width: 50%;
+    height: 35px;
+    margin-bottom: 2%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    align-items: center;
+    text-align:initial;
+}
+#Login_container>button{
+    width: 40%;
+    height: 30px;
+    padding: 1%;
+    border: none;
+    text-align: center;
+    background-color: #f3912E;
+    border-radius: 10px;
+}
+#Login_container>button:hover{
+    cursor: pointer;
+    color: aliceblue;
+}
+#Login_container>h3>span:hover{
+    color: aqua;
+    cursor: pointer;
+}
+@media all and (min-width:340px) and (max-width:767px){
+    #REgistration_container{
+        /* border: 2px solid red; */
+        /* display: grid; */
+        justify-content: center;
+        text-align: center;
+        width: 90%;
+        background-color:aliceblue;
+        padding: 1%;
+        color: black;
+        border-radius: 5%;
+    }
+    #Login_container{
+        /* border: 2px solid red; */
+        /* display: grid; */
+        justify-content: center;
+        text-align: center;
+        width: 90%;
+        background-color:aliceblue;
+        padding: 1%;
+        color: black;
+        border-radius: 5%;
+    }
+}
+

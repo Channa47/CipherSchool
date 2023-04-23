@@ -1,0 +1,54 @@
+#password_container{
+    /* border: 2px solid red; */
+    padding: 1%;
+    border-bottom: 1px solid black;
+}
+#password_container_header{
+    /* border:1px soild black; */
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+   
+}
+#password_container_header>p{
+    font-size: large;
+    font-weight: bold;
+}
+#password_container_header>button{
+    align-items: center;
+    width: 8%;
+    height: 25px;
+    border: none;
+    color: aliceblue;
+    background-color: #f3912E;
+    border: #f3912E;
+    border-radius: 5px;
+}
+#password_container_input{
+    /* border: 2px solid green; */
+    text-align: left;
+    padding: 1%;
+ }
+ #password_container_input>input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    font-size: larger;
+ }
+
+ @media all and (min-width:340px) and (max-width:767px){
+    #password_container_header>button{
+        align-items: center;
+        width: 20%;
+        height: 25px;
+        border: none;
+        color: aliceblue;
+        background-color: #f3912E;
+        border: #f3912E;
+        border-radius: 5px;
+    }
+ }

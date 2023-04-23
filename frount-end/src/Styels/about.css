@@ -6,7 +6,7 @@
     height: 200px;
     padding: 1%;
     /* border: 2px solid red; */
-    background-color: aliceblue;
+    border-bottom: 1px solid darkgray;
 }
 #About-child-First{
   /* background-color: blue; */
