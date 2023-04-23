@@ -1,0 +1,72 @@
+#About{
+    width: 98%;
+    height: 200px;
+    margin-top: 13%;
+    align-items: center;
+    height: 200px;
+    padding: 1%;
+    /* border: 2px solid red; */
+    background-color: aliceblue;
+}
+#About-child-First{
+  /* background-color: blue; */
+  height: 29%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+}
+#About-child-First>p{
+    font-size: large;
+    font-weight: bold;
+}
+#About-child-First>button{
+    width: 6%;
+    height: 25px;
+    background-color: #f3912E;
+    border: #f3912E;
+    color: aliceblue;
+    border-radius: 1%;
+}
+#About-child-second{
+    /* background-color: antiquewhite; */
+    height: 69%;
+    margin: 1%;
+}
+.textarea-editable{
+    height: 90%;
+    width:90%;
+    border: none;
+    resize: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.textarea-not-editable{
+    height: 90%;
+    width:90%;
+    border: none;
+    resize: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    pointer-events: none;
+}
+@media all and (min-width:768px) and (max-width:1023px){
+    #About{
+        width: 98%;
+        height: 200px;
+        margin-top: 19%;
+    }
+}
+@media all and (min-width:340px) and (max-width:767px){
+    #About{
+        width: 98%;
+        height: 200px;
+        margin-top: 55%;
+    }
+    #About-child-First>button{
+        width: 20%;
+        height: 25px;
+        background-color: #f3912E;
+        border: #f3912E;
+        color: aliceblue;
+        border-radius: 1%;
+    }
+}

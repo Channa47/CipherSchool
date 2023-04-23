@@ -1,11 +1,18 @@
-
-import './App.css';
-import Profile from './Pages/Profile';
+import "./App.css";
+import Abountme from "./Componenets/Abountme";
+import Details from "./Componenets/Details";
+import Map from "./Componenets/Map";
+import Navbar from "./Componenets/Navbar";
+import Profile from "./Pages/Profile";
 
 function App() {
+ 
   return (
     <div className="App">
-           <Profile/>
+      <Navbar />
+      <Details />
+       <Abountme/>
+       <Map/>
     </div>
   );
 }
