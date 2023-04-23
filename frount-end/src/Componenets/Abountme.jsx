@@ -25,7 +25,7 @@ function Abountme() {
         console.log(e)
       })
     }
-  },[user._id])
+  },[user])
   return (
     <div id='About'>
        <div id='About-child-First'>

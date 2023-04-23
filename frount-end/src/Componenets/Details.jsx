@@ -25,7 +25,7 @@ function Details() {
         console.log(e)
       })
     }
-  },[user._id])
+  },[user])
   return (
     <>
     <br />
